@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const Header = props => {
     return (
         <header className="top">
-            <h1>Cotizador de seguros de auto</h1>
+            <h1>{props.titulo}</h1>
         </header>
     )
 }
