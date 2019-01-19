@@ -23,6 +23,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-transition-group": "^2.5.3"
   }
 }
