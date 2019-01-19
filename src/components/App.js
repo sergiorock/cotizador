@@ -4,6 +4,10 @@ import Formulario from './Formulario';
 import { obtenerDiferenciaAnio, calcularMarca, obtenerPlan } from '../helper';
 
 class App extends Component {
+  state = {
+    resultado: '',
+    datos: {}
+  }
   cotizarSeguro = (datos) => {
     const { marca, year, plan } = datos;
 
@@ -24,7 +28,19 @@ class App extends Component {
 
     //Dependiendo del plan, incrementar
     resultado = parseFloat(incrementoPlan * resultado).toFixed(2);
-    console.log(resultado);
+
+    //Crear objeto para el resumen
+    const datosAuto = {
+      marca: marca,
+      year: year,
+      plan: plan
+    }
+    
+    this.setState({
+      resultado: resultado,
+      datos: datosAuto
+
+    })
 
 
   }
