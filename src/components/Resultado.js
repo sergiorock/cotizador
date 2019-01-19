@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 class Resultado extends Component {
-    mostrarResultado = () => {
-        const resultado = this.props.resultado;
-        const leyenda = "Elige Marca, Año y tipo de Seguro";
-        if(!resultado) return leyenda;
-
-        return(
-            <div className="gran-total">
-                <p>El total es ${resultado}</p>
-            </div>
-        )
-    }
-
     render() {
+        const resultado = this.props.resultado;
+        const mensaje = (!resultado) ? "Elige Marca, Año y tipo de Seguro" : "El total es: "
         return(
             <div className="gran-total">
-                { this.mostrarResultado() }
-            </div>
+            {mensaje}
+            <TransitionGroup component="span" className="resultado">
+                <CSSTransition 
+                    classNames="resultado" 
+                    key={resultado}
+                    timeout={{enter: 500, exit: 500}}>
+                    <span>{resultado}</span>
+                </CSSTransition>
+            </TransitionGroup>
+        </div>
         )
     }
 }
