@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
+import Resumen from './Resumen'
 import { obtenerDiferenciaAnio, calcularMarca, obtenerPlan } from '../helper';
+
 
 class App extends Component {
   state = {
@@ -56,6 +58,12 @@ class App extends Component {
             cotizarSeguro = {this.cotizarSeguro}  
           />
         </div>
+        
+          < Resumen 
+            datos = {this.state.datos}
+            resultado = {this.state.resultado}
+          />
+        
       </div>
     );
   }
