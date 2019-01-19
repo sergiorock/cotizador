@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "%7BsergioRock%7D.github.io/%7Bcotizador%7D/precache-manifest.1ad687869f2b1ea84cc64e47df3c6e7a.js"
+  "/cotizador/precache-manifest.c0d82d93cd745c65777a9d342872ebd1.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("%7BsergioRock%7D.github.io/%7Bcotizador%7D/index.html", {
+workbox.routing.registerNavigationRoute("/cotizador/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
